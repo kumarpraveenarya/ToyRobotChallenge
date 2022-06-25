@@ -4,7 +4,7 @@
     {
         RobotState State { get; set; }
 
-        IToyRobotService Place(RobotState location);
+        IToyRobotService Place(RobotState state);
 
         IToyRobotService Move { get; }
 

@@ -6,6 +6,8 @@ namespace ToyRobotChallenge.Service.Validators.Interface
     {
         void SetPlayBoard(int rows, int columns);
 
+        (int, int) GetPlayBoard();
+
         RobotState GetValidState(RobotState previousLocation, RobotState location);
     }
 }

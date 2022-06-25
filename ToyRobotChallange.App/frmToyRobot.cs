@@ -14,17 +14,34 @@ namespace ToyRobotChallenge.App
 	public partial class frmToyRobot : Form
     {
         private readonly IGameService game;
-        private readonly IBoardValidator Validator;
+        private readonly IBoardValidator boardValidator;
         private readonly IToyRobotService robotService;
 
 		public frmToyRobot(ServiceProvider serviceProvider)
 		{
 			InitializeComponent();
-            Validator = serviceProvider.GetRequiredService<IBoardValidator>();
+            boardValidator = serviceProvider.GetRequiredService<IBoardValidator>();
             robotService = serviceProvider.GetRequiredService<IToyRobotService>();
             game = serviceProvider.GetRequiredService<IGameService>();
-			InitialiseRobot();
+			
+			//Tested different dimentions
+            //boardValidator.SetPlayBoard(7,7);
+			
+            FillBoard();
+            InitialiseRobot();
 		}
+
+        public void FillBoard()
+        {
+            var board = boardValidator.GetPlayBoard();
+            tlp1.ColumnCount = board.Item1;
+            tlp1.RowCount = board.Item2;
+            for (int i = 0; i < board.Item1; i++)
+            {
+                tlp1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+                tlp1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+			}
+        }
 
 		public void InitialiseRobot()
 		{
@@ -58,12 +75,12 @@ namespace ToyRobotChallenge.App
 		/// <param name="state">The current state of the Robot. This is used to place the robot on the tabletop</param>
 		private void PlaceRobotOnMatrix(RobotState state)
 		{
-			tableLayoutPanel1.Controls.Clear();
-			PictureBox pictureBox = (PictureBox)tableLayoutPanel1.GetControlFromPosition(5 - state.Position.X, 5 - state.Position.Y);
+			tlp1.Controls.Clear();
+			PictureBox pictureBox = (PictureBox)tlp1.GetControlFromPosition(tlp1.RowCount - state.Position.X, tlp1.ColumnCount - state.Position.Y);
 			if (pictureBox == null)
 			{
 				pictureBox = new PictureBox();
-				tableLayoutPanel1.Controls.Add(pictureBox, state.Position.X, state.Position.Y);
+				tlp1.Controls.Add(pictureBox, state.Position.X, state.Position.Y);
 			}
 			pictureBox.Image = Properties.Resources.Robot;
 			switch (state.Direction)

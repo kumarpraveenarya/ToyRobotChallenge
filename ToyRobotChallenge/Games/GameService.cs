@@ -11,7 +11,6 @@ namespace ToyRobotChallenge.Service.Games
     {
         private IToyRobotService _toy { get; }
 
-
         public GameService(IToyRobotService toy)
         {
             this._toy = toy;

@@ -16,8 +16,7 @@ namespace ToyRobotChallenge.Service.ToyRobot
             _validator = gameBoard;
         }
 
-        public string Report => string.Format("Output: {0},{1},{2}", State.Position.X,
-            State.Position.Y, State.Direction.ToString().ToUpper());
+        public string Report => $"Output: {State.Position.X},{State.Position.Y}, {State.Direction.convertToString()}".ToUpper();
 
         public IToyRobotService MoveLeft => Rotate(-1);
 
@@ -25,9 +24,9 @@ namespace ToyRobotChallenge.Service.ToyRobot
 
         public IToyRobotService Move => Place(State.Move());
 
-        public IToyRobotService Place(RobotState location)
+        public IToyRobotService Place(RobotState state)
         {
-            State = _validator.GetValidState(State, location);
+            State = _validator.GetValidState(State, state);
 
             return this;
         }

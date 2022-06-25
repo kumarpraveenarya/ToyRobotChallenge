@@ -1,4 +1,5 @@
-﻿using ToyRobotChallenge.Service.ToyRobot;
+﻿using System;
+using ToyRobotChallenge.Service.ToyRobot;
 using ToyRobotChallenge.Service.Validators.Interface;
 
 namespace ToyRobotChallenge.Service.Validators
@@ -16,7 +17,12 @@ namespace ToyRobotChallenge.Service.Validators
             this.Rows = rows;
             this.Columns = columns;
         }
-        
+
+        public (int,int) GetPlayBoard()
+        {
+            return (Rows, Columns);
+        }
+
         public RobotState GetValidState(RobotState previousLocation, RobotState newLocation)
         {
             if(IsValidState(newLocation))
