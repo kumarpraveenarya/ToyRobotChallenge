@@ -229,7 +229,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Name = "frmToyRobot";
-            this.Text = "Form1";
+            this.Text = "Toy Robot Challenge";
             ((System.ComponentModel.ISupportInitialize)(this.txtX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbStart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtY)).EndInit();
