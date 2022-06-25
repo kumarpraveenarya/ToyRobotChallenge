@@ -44,7 +44,7 @@ namespace ToyRobotChallenge.Tests.GamesTests
             _game.Play("PLACE 3,2,SOUTH");
             _game.Play("MOVE");
 
-            Assert.AreEqual("Output: 3,1,SOUTH", toy.Report);
+            Assert.AreEqual("Output: 3,3,SOUTH", toy.Report);
         }
 
         [Test]
@@ -59,7 +59,7 @@ namespace ToyRobotChallenge.Tests.GamesTests
             // if the robot goes out of the board it ignores the command
             _game.Play("MOVE");
 
-            Assert.AreEqual("Output: 2,4,NORTH", toy.Report);
+            Assert.AreEqual("Output: 2,0,NORTH", toy.Report);
         }
 
         [Test]
@@ -75,7 +75,7 @@ namespace ToyRobotChallenge.Tests.GamesTests
             _game.Play("MOVE");
             var output = _game.Play("REPORT");
 
-            Assert.AreEqual("Output: 1,2,SOUTH", output);
+            Assert.AreEqual("Output: 1,4,SOUTH", output);
         }
 
     }
