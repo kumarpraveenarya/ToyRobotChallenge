@@ -1,0 +1,9 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=46a9a7cb_002D340f_002D4645_002D8514_002D94be8ef7d029/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="CommandParserTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::3049AB40-ACE8-48C6-9962-A61200747622::.NETCoreApp,Version=v3.1::ToyRobotChallenge.Tests.ParserTests.CommandParserTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::3049AB40-ACE8-48C6-9962-A61200747622::.NETCoreApp,Version=v3.1::ToyRobotChallenge.Tests.GameBoardsTests.GameBoardTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::3049AB40-ACE8-48C6-9962-A61200747622::.NETCoreApp,Version=v3.1::ToyRobotChallenge.Tests.GamesTests.GameTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::3049AB40-ACE8-48C6-9962-A61200747622::.NETCoreApp,Version=v3.1::ToyRobotChallenge.Tests.ToyRobotTests.RobotToyTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

@@ -1,0 +1,17 @@
+C:\Interview\ToyRobot\ToyRobotChallenge\ClientApp\bin\Debug\netcoreapp3.1\ClientApp.exe
+C:\Interview\ToyRobot\ToyRobotChallenge\ClientApp\bin\Debug\netcoreapp3.1\ClientApp.deps.json
+C:\Interview\ToyRobot\ToyRobotChallenge\ClientApp\bin\Debug\netcoreapp3.1\ClientApp.runtimeconfig.json
+C:\Interview\ToyRobot\ToyRobotChallenge\ClientApp\bin\Debug\netcoreapp3.1\ClientApp.runtimeconfig.dev.json
+C:\Interview\ToyRobot\ToyRobotChallenge\ClientApp\bin\Debug\netcoreapp3.1\ClientApp.dll
+C:\Interview\ToyRobot\ToyRobotChallenge\ClientApp\bin\Debug\netcoreapp3.1\ClientApp.pdb
+C:\Interview\ToyRobot\ToyRobotChallenge\ClientApp\bin\Debug\netcoreapp3.1\ToyRobotChallenge.Service.dll
+C:\Interview\ToyRobot\ToyRobotChallenge\ClientApp\bin\Debug\netcoreapp3.1\ToyRobotChallenge.Service.pdb
+C:\Interview\ToyRobot\ToyRobotChallenge\ClientApp\obj\Debug\netcoreapp3.1\ClientApp.csproj.AssemblyReference.cache
+C:\Interview\ToyRobot\ToyRobotChallenge\ClientApp\obj\Debug\netcoreapp3.1\ClientApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Interview\ToyRobot\ToyRobotChallenge\ClientApp\obj\Debug\netcoreapp3.1\ClientApp.AssemblyInfoInputs.cache
+C:\Interview\ToyRobot\ToyRobotChallenge\ClientApp\obj\Debug\netcoreapp3.1\ClientApp.AssemblyInfo.cs
+C:\Interview\ToyRobot\ToyRobotChallenge\ClientApp\obj\Debug\netcoreapp3.1\ClientApp.csproj.CoreCompileInputs.cache
+C:\Interview\ToyRobot\ToyRobotChallenge\ClientApp\obj\Debug\netcoreapp3.1\ClientApp.csproj.CopyComplete
+C:\Interview\ToyRobot\ToyRobotChallenge\ClientApp\obj\Debug\netcoreapp3.1\ClientApp.dll
+C:\Interview\ToyRobot\ToyRobotChallenge\ClientApp\obj\Debug\netcoreapp3.1\ClientApp.pdb
+C:\Interview\ToyRobot\ToyRobotChallenge\ClientApp\obj\Debug\netcoreapp3.1\ClientApp.genruntimeconfig.cache

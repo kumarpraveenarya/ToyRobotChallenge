@@ -1,0 +1,10 @@
+C:\Interview\ToyRobot\ToyRobotChallenge\ToyRobotChallenge\bin\Debug\netcoreapp3.1\ToyRobotChallenge.deps.json
+C:\Interview\ToyRobot\ToyRobotChallenge\ToyRobotChallenge\bin\Debug\netcoreapp3.1\ToyRobotChallenge.dll
+C:\Interview\ToyRobot\ToyRobotChallenge\ToyRobotChallenge\bin\Debug\netcoreapp3.1\ToyRobotChallenge.pdb
+C:\Interview\ToyRobot\ToyRobotChallenge\ToyRobotChallenge\obj\Debug\netcoreapp3.1\ToyRobotChallenge.csproj.AssemblyReference.cache
+C:\Interview\ToyRobot\ToyRobotChallenge\ToyRobotChallenge\obj\Debug\netcoreapp3.1\ToyRobotChallenge.GeneratedMSBuildEditorConfig.editorconfig
+C:\Interview\ToyRobot\ToyRobotChallenge\ToyRobotChallenge\obj\Debug\netcoreapp3.1\ToyRobotChallenge.AssemblyInfoInputs.cache
+C:\Interview\ToyRobot\ToyRobotChallenge\ToyRobotChallenge\obj\Debug\netcoreapp3.1\ToyRobotChallenge.AssemblyInfo.cs
+C:\Interview\ToyRobot\ToyRobotChallenge\ToyRobotChallenge\obj\Debug\netcoreapp3.1\ToyRobotChallenge.csproj.CoreCompileInputs.cache
+C:\Interview\ToyRobot\ToyRobotChallenge\ToyRobotChallenge\obj\Debug\netcoreapp3.1\ToyRobotChallenge.dll
+C:\Interview\ToyRobot\ToyRobotChallenge\ToyRobotChallenge\obj\Debug\netcoreapp3.1\ToyRobotChallenge.pdb

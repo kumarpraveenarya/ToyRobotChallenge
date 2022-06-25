@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "7NACWoLwZzfM/86My1UU24fNzIJvxZeC/BbxP6NsATQ3svUZ+h/bq1fC0Ho9DRjldmHih11jqgP7fGL2YD1sPQ==",
+  "success": true,
+  "projectFilePath": "C:\\Interview\\ToyRobot\\ToyRobotChallenge\\ClientApp\\ClientApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\aryaj\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.25\\microsoft.netcore.app.host.win-x64.3.1.25.nupkg.sha512"
+  ],
+  "logs": []
+}

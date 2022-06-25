@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OJXJSi4Dfj8rCBFmQzrAA2qcStA3YSD/S+cs6j6YWfJJL4Cn1nwW1R5/Hldu4M5+J3wr/WNGb+kJgiEtwOXbVw==",
+  "dgSpecHash": "xl9tabvAUXuFAaV8X1aoc3uoXO5UlA0AJk5RViEmhtTaEt2U4sCSz/fnHnj1Ttx2o5aKRmWrMWBLMZAopzNYhw==",
   "success": true,
-  "projectFilePath": "C:\\Interview\\ToyRobot\\ToyRobotChallenge\\ToyRobotChallenge\\ToyRobotChallenge.csproj",
+  "projectFilePath": "C:\\Interview\\ToyRobot\\ToyRobotChallenge\\ToyRobotChallenge\\ToyRobotChallenge.Service.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

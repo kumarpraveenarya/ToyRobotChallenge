@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32602.291
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToyRobotChallenge", "ToyRobotChallenge\ToyRobotChallenge.csproj", "{378FD930-6EA8-4048-B918-087ACF89C92B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToyRobotChallenge.Service", "ToyRobotChallenge\ToyRobotChallenge.Service.csproj", "{378FD930-6EA8-4048-B918-087ACF89C92B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToyRobotChallenge.Tests", "ToyRobotChallenge.Tests\ToyRobotChallenge.Tests.csproj", "{3049AB40-ACE8-48C6-9962-A61200747622}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientApp", "ClientApp\ClientApp.csproj", "{A1579CE7-7C1D-4A83-A353-51405609A685}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{378FD930-6EA8-4048-B918-087ACF89C92B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{378FD930-6EA8-4048-B918-087ACF89C92B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{378FD930-6EA8-4048-B918-087ACF89C92B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3049AB40-ACE8-48C6-9962-A61200747622}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3049AB40-ACE8-48C6-9962-A61200747622}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3049AB40-ACE8-48C6-9962-A61200747622}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3049AB40-ACE8-48C6-9962-A61200747622}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1579CE7-7C1D-4A83-A353-51405609A685}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1579CE7-7C1D-4A83-A353-51405609A685}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1579CE7-7C1D-4A83-A353-51405609A685}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1579CE7-7C1D-4A83-A353-51405609A685}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

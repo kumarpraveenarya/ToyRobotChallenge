@@ -15,9 +15,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Interview\\ToyRobot\\ToyRobotChallenge\\ToyRobotChallenge\\ToyRobotChallenge.csproj",
-      "projectName": "ToyRobotChallenge",
-      "projectPath": "C:\\Interview\\ToyRobot\\ToyRobotChallenge\\ToyRobotChallenge\\ToyRobotChallenge.csproj",
+      "projectUniqueName": "C:\\Interview\\ToyRobot\\ToyRobotChallenge\\ToyRobotChallenge\\ToyRobotChallenge.Service.csproj",
+      "projectName": "ToyRobotChallenge.Service",
+      "projectPath": "C:\\Interview\\ToyRobot\\ToyRobotChallenge\\ToyRobotChallenge\\ToyRobotChallenge.Service.csproj",
       "packagesPath": "C:\\Users\\aryaj\\.nuget\\packages\\",
       "outputPath": "C:\\Interview\\ToyRobot\\ToyRobotChallenge\\ToyRobotChallenge\\obj\\",
       "projectStyle": "PackageReference",
@@ -58,7 +58,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -67,7 +68,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100-preview.5.22307.18\\RuntimeIdentifierGraph.json"
       }
     }
   }
