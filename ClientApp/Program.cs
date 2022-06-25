@@ -12,18 +12,9 @@ namespace ClientApp
         public static void Main(string[] args)
         {
             const string description =
-@"  **************************************
-  **************************************
-  **                                  **
-  **        TOY SIMULATOR v1.0        **
-  **                                  **
-  **************************************
-  **************************************
+@" Instructions to Run
 
-     Welcome!
-
-  1: Place the toy on a 5 x 5 grid
-     using the following command:
+  1: Place the toy on a 5 x 5 grid using the following command:
 
      PLACE X,Y,F (Where X and Y are integers and F 
      must be either NORTH, SOUTH, EAST or WEST)
