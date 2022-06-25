@@ -8,33 +8,33 @@ namespace ToyRobotChallenge.Service.ToyRobot
 {
     public class ToyRobotService : IToyRobotService
     {
-        private readonly IValidator _validator;
-        public RobotState Location { get; set; }
+        private readonly IBoardValidator _validator;
+        public RobotState State { get; set; }
 
-        public ToyRobotService(IValidator gameBoard)
+        public ToyRobotService(IBoardValidator gameBoard)
         {
             _validator = gameBoard;
         }
 
-        public string Report => string.Format("Output: {0},{1},{2}", Location.Position.X,
-            Location.Position.Y, Location.Direction.ToString().ToUpper());
+        public string Report => string.Format("Output: {0},{1},{2}", State.Position.X,
+            State.Position.Y, State.Direction.ToString().ToUpper());
 
         public IToyRobotService MoveLeft => Rotate(-1);
 
         public IToyRobotService MoveRight => Rotate(1);
 
-        public IToyRobotService Move => Place(Location.Move());
+        public IToyRobotService Move => Place(State.Move());
 
         public IToyRobotService Place(RobotState location)
         {
-            Location = _validator.GetValidLocation(Location, location);
+            State = _validator.GetValidState(State, location);
 
             return this;
         }
 
         public override string ToString()
         {
-            if (Location == null)
+            if (State == null)
                 return "Toy Robot is not placed on Game Board";
 
             return string.Empty;
@@ -42,17 +42,17 @@ namespace ToyRobotChallenge.Service.ToyRobot
 
         private IToyRobotService Rotate(int rotationNumber)
         {
-            if (Location == null)
+            if (State == null)
                 return this;
 
             var directions = (Direction[])Enum.GetValues(typeof(Direction));
            
-            if ((Location.Direction + rotationNumber) < 0)
-                Location.Direction = directions[directions.Length - 1];
+            if ((State.Direction + rotationNumber) < 0)
+                State.Direction = directions[directions.Length - 1];
             else
             {
-                var index = ((int)((Location.Direction) + rotationNumber)) % directions.Length;
-                Location.Direction = directions[index];
+                var index = ((int)((State.Direction) + rotationNumber)) % directions.Length;
+                State.Direction = directions[index];
             }
 
             return this;

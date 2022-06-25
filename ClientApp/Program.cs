@@ -28,10 +28,10 @@ namespace ClientApp
      MOVE   – Moves the toy 1 unit in the facing direction.
      EXIT   – Closes the toy Simulator.
 ";
-
-            IValidator validator = new BoardValidator(5, 5);
-            IToyRobotService robot = new ToyRobotService(validator);
-            var game = new Game(robot);
+            // by default board is set to 5X5
+            IBoardValidator board = new BoardValidator();
+            IToyRobotService robot = new ToyRobotService(board);
+            var game = new GameService(robot);
 
             var stopApplication = false;
             Console.WriteLine(description);

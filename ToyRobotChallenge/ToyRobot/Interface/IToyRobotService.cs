@@ -2,7 +2,7 @@
 {
     public interface IToyRobotService
     {
-        RobotState Location { get; set; }
+        RobotState State { get; set; }
 
         IToyRobotService Place(RobotState location);
 

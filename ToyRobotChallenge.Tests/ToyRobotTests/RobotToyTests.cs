@@ -10,84 +10,84 @@ namespace ToyRobotChallenge.Tests.ToyRobotTests
     public class RobotToyTests
     {
         private IToyRobotService _robotToy;
-        private Mock<IValidator> validatorMock;
+        private Mock<IBoardValidator> _boardValidatorMock;
 
         [SetUp]
         public void Setup()
         {
-            validatorMock = new Mock<IValidator>();
-            _robotToy = new ToyRobotService(validatorMock.Object);
+            _boardValidatorMock = new Mock<IBoardValidator>();
+            _robotToy = new ToyRobotService(_boardValidatorMock.Object);
         }
 
         [Test]
         public void When_location_is_not_valid_do_not_set_Location()
         {
-            validatorMock.Setup(x => x.GetValidLocation(It.IsAny<RobotState>(), It.IsAny<RobotState>())).Returns(() => null);
+            _boardValidatorMock.Setup(x => x.GetValidState(It.IsAny<RobotState>(), It.IsAny<RobotState>())).Returns(() => null);
             _robotToy.Place(It.IsAny<RobotState>());
 
-            Assert.IsNull(_robotToy.Location);
+            Assert.IsNull(_robotToy.State);
         }
 
         [Test]
         public void When_location_is_not_valid_set_Location()
         {
             var position = new Position(0, 3);
-            var toylocation = new RobotState(position, Direction.South);
+            var toyLocation = new RobotState(position, Direction.South);
 
-            validatorMock.Setup(x => x.GetValidLocation(It.IsAny<RobotState>(), It.IsAny<RobotState>())).Returns(toylocation);
-            _robotToy.Place(toylocation);
+            _boardValidatorMock.Setup(x => x.GetValidState(It.IsAny<RobotState>(), It.IsAny<RobotState>())).Returns(toyLocation);
+            _robotToy.Place(toyLocation);
 
-            Assert.IsNotNull(_robotToy.Location);
+            Assert.IsNotNull(_robotToy.State);
         }
 
         [Test]
         public void When_Facing_West_TurnLeft_Direction_Should_Be_South()
         {
-            var lastpos = new Position(2, 2);
-            var lastlocation = new RobotState(lastpos, Direction.West);
-            var toylocation = new RobotState(lastpos, Direction.South);
+            var lastPosition = new Position(2, 2);
+            var lastLocation = new RobotState(lastPosition, Direction.West);
+            var toyLocation = new RobotState(lastPosition, Direction.South);
 
-            validatorMock.Setup(x => x.GetValidLocation(It.IsAny<RobotState>(), It.IsAny<RobotState>())).Returns(lastlocation);
+            _boardValidatorMock.Setup(x => x.GetValidState(It.IsAny<RobotState>(), It.IsAny<RobotState>())).Returns(lastLocation);
 
-            _ = _robotToy.Place(lastlocation);
+            _ = _robotToy.Place(lastLocation);
 
-            validatorMock.Setup(x => x.GetValidLocation(It.IsAny<RobotState>(), It.IsAny<RobotState>())).Returns(toylocation);
+            _boardValidatorMock.Setup(x => x.GetValidState(It.IsAny<RobotState>(), It.IsAny<RobotState>())).Returns(toyLocation);
 
             _ = _robotToy.MoveLeft;
 
-            Assert.AreEqual(Direction.South, _robotToy.Location.Direction);
+            Assert.AreEqual(Direction.South, _robotToy.State.Direction);
         }
 
         [Test]
         public void When_Facing_West_TurnRight_Direction_Should_Be_North()
         {
-            var lastpos = new Position(2, 2);
-            var lastlocation = new RobotState(lastpos, Direction.West);
-            var toylocation = new RobotState(lastpos, Direction.North);
+            var lastPosition = new Position(2, 2);
+            var lastLocation = new RobotState(lastPosition, Direction.West);
+            var toyLocation = new RobotState(lastPosition, Direction.North);
 
-            validatorMock.Setup(x => x.GetValidLocation(It.IsAny<RobotState>(), It.IsAny<RobotState>())).Returns(lastlocation);
+            _boardValidatorMock.Setup(x => x.GetValidState(It.IsAny<RobotState>(), It.IsAny<RobotState>())).Returns(lastLocation);
 
-            _ = _robotToy.Place(lastlocation);
+            _ = _robotToy.Place(lastLocation);
 
-            validatorMock.Setup(x => x.GetValidLocation(It.IsAny<RobotState>(), It.IsAny<RobotState>())).Returns(toylocation);
+            _boardValidatorMock.Setup(x => x.GetValidState(It.IsAny<RobotState>(), It.IsAny<RobotState>())).Returns(toyLocation);
 
             _ = _robotToy.MoveRight;
 
-            Assert.AreEqual(Direction.North, _robotToy.Location.Direction);
+            Assert.AreEqual(Direction.North, _robotToy.State.Direction);
         }
 
         [Test]
         public void When_Position_Is_Valie_Then_Move()
         {
             var position = new Position(2, 3);
-            var toylocation = new RobotState(position, Direction.East);
+            var toyLocation = new RobotState(position, Direction.East);
 
-            validatorMock.Setup(x => x.GetValidLocation(It.IsAny<RobotState>(), It.IsAny<RobotState>())).Returns(toylocation);
+            _boardValidatorMock.Setup(x => x.GetValidState(It.IsAny<RobotState>(), It.IsAny<RobotState>())).Returns(toyLocation);
 
             _ = _robotToy.Place(It.IsAny<RobotState>()).Move;
 
-            Assert.AreEqual(2, _robotToy.Location.Position.X);
-            Assert.AreEqual(3, _robotToy.Location.Position.Y);
+            Assert.AreEqual(2, _robotToy.State.Position.X);
+            Assert.AreEqual(3, _robotToy.State.Position.Y);
         }
     }
 }

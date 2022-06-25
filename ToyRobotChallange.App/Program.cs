@@ -24,12 +24,10 @@ namespace ToyRobotChallenge.App
 			Application.SetHighDpiMode(HighDpiMode.SystemAware);
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			AppDomain.CurrentDomain.UnhandledException +=
-		   (sender, args) => HandleUnhandledException(args.ExceptionObject as Exception);
-			Application.ThreadException +=
-				(sender, args) => HandleUnhandledException(args.Exception);
+			AppDomain.CurrentDomain.UnhandledException += (sender, args) => HandleUnhandledException(args.ExceptionObject as Exception);
+			Application.ThreadException += (sender, args) => HandleUnhandledException(args.Exception);
 
-			Application.Run(new frmToyRobot());
+            Application.Run(new frmToyRobot(ServiceProvider));
 
 			ShutDown();
 		}
@@ -45,9 +43,9 @@ namespace ToyRobotChallenge.App
 		static void Config()
 		{
 			ServiceProvider = new ServiceCollection()
-                .AddSingleton<IValidator, BoardValidator>()
+                .AddSingleton<IBoardValidator, BoardValidator>()
 				.AddSingleton<IToyRobotService, ToyRobotService>()
-                .AddSingleton<IGame, Game>()
+                .AddSingleton<IGameService, GameService>()
 				.BuildServiceProvider();
 		}
 

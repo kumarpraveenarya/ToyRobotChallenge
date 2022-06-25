@@ -1,31 +1,28 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Drawing;
-using System.Linq;
 using System.Windows.Forms;
 using ToyRobotChallenge.Service.Enums;
 using ToyRobotChallenge.Service.Extensions;
-using ToyRobotChallenge.Service.Games;
 using ToyRobotChallenge.Service.Games.Interface;
 using ToyRobotChallenge.Service.ToyRobot;
 using ToyRobotChallenge.Service.ToyRobot.Interface;
-using ToyRobotChallenge.Service.Validators;
 using ToyRobotChallenge.Service.Validators.Interface;
 
 namespace ToyRobotChallenge.App
 {
 	public partial class frmToyRobot : Form
     {
-        private readonly IGame game;
-        private readonly IValidator Validator;
+        private readonly IGameService game;
+        private readonly IBoardValidator Validator;
         private readonly IToyRobotService robotService;
 
-		public frmToyRobot()
+		public frmToyRobot(ServiceProvider serviceProvider)
 		{
 			InitializeComponent();
-            Validator = new BoardValidator(5, 5);
-			robotService = new ToyRobotService(Validator);
-            game = new Game(robotService);
+            Validator = serviceProvider.GetRequiredService<IBoardValidator>();
+            robotService = serviceProvider.GetRequiredService<IToyRobotService>();
+            game = serviceProvider.GetRequiredService<IGameService>();
 			InitialiseRobot();
 		}
 

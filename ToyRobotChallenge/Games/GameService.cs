@@ -7,12 +7,12 @@ using ToyRobotChallenge.Service.ToyRobot.Interface;
 
 namespace ToyRobotChallenge.Service.Games
 {
-    public class Game : IGame
+    public class GameService : IGameService
     {
         private IToyRobotService _toy { get; }
 
 
-        public Game(IToyRobotService toy)
+        public GameService(IToyRobotService toy)
         {
             this._toy = toy;
         }
@@ -32,7 +32,7 @@ namespace ToyRobotChallenge.Service.Games
 
         public RobotState GetRobotState()
         {
-            return _toy.Location;
+            return _toy.State;
         }
     }
 }

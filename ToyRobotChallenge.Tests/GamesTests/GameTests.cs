@@ -10,36 +10,36 @@ namespace ToyRobotChallenge.Tests.GamesTests
     [TestFixture]
     public class GameTests
     {
-        private IGame _game;
+        private IGameService _game;
        
         [Test]
         public void When_Place_IS_Valid_Then_Set_ToyLocation()
         {
-            var toy = new ToyRobotService(new BoardValidator(5, 5));
-            _game = new Game(toy);
+            var toy = new ToyRobotService(new BoardValidator());
+            _game = new GameService(toy);
             _game.Play("PLACE 1,4,EAST");
             
-            Assert.AreEqual(1, toy.Location.Position.X);
-            Assert.AreEqual(4, toy.Location.Position.Y);
-            Assert.AreEqual(Direction.East, toy.Location.Direction);
+            Assert.AreEqual(1, toy.State.Position.X);
+            Assert.AreEqual(4, toy.State.Position.Y);
+            Assert.AreEqual(Direction.East, toy.State.Direction);
         }
 
         [Test]
         public void When_Place_IS_InValid_Then_ToyLocation_Shoud_Be_Null()
         {
-            var toy = new ToyRobotService(new BoardValidator(5, 5));
-            _game = new Game(toy);
+            var toy = new ToyRobotService(new BoardValidator());
+            _game = new GameService(toy);
             
             _game.Play("PLACE 9,7,EAST");
 
-            Assert.IsNull(toy.Location);
+            Assert.IsNull(toy.State);
         }
 
         [Test]
         public void When_Location_is_Valid_Then_Location_will_Change_in_Report()
         {
-            var toy = new ToyRobotService(new BoardValidator(5, 5));
-            _game = new Game(toy);
+            var toy = new ToyRobotService(new BoardValidator());
+            _game = new GameService(toy);
 
             _game.Play("PLACE 3,2,SOUTH");
             _game.Play("MOVE");
@@ -50,8 +50,8 @@ namespace ToyRobotChallenge.Tests.GamesTests
         [Test]
         public void When_Location_Is_Out_of_Board_then_Ignore_Move()
         {
-            var toy = new ToyRobotService(new BoardValidator(5, 5));
-            _game = new Game(toy);
+            var toy = new ToyRobotService(new BoardValidator());
+            _game = new GameService(toy);
 
             _game.Play("PLACE 2,2,NORTH");
             _game.Play("MOVE");
@@ -65,8 +65,8 @@ namespace ToyRobotChallenge.Tests.GamesTests
         [Test]
         public void When_Commands_Are_Valid_Reports_Should_Be_Valid()
         {
-            var toy = new ToyRobotService(new BoardValidator(5, 5));
-            _game = new Game(toy);
+            var toy = new ToyRobotService(new BoardValidator());
+            _game = new GameService(toy);
 
             _game.Play("PLACE 3,3,WEST");
             _game.Play("MOVE");

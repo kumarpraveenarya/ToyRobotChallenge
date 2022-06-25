@@ -8,11 +8,11 @@ namespace ToyRobotChallenge.Tests.GameBoardsTests
 {
     public class GameBoardTests
     {
-        private IValidator _validator; 
+        private IBoardValidator _boardValidator; 
         [SetUp]
         public void Setup()
         {
-            _validator = new BoardValidator(5, 5);
+            _boardValidator = new BoardValidator();
         }
 
         [Test]
@@ -23,7 +23,7 @@ namespace ToyRobotChallenge.Tests.GameBoardsTests
 
             var position = new Position(0, 6);
             var newLocation = new RobotState(position, Direction.South);
-            var result = _validator.GetValidLocation(prevLocation, newLocation);
+            var result = _boardValidator.GetValidState(prevLocation, newLocation);
 
             Assert.AreEqual(result, prevLocation);
         }
@@ -36,7 +36,7 @@ namespace ToyRobotChallenge.Tests.GameBoardsTests
 
             var position = new Position(1, 2);
             var newLocation = new RobotState(position, Direction.South);
-            var result = _validator.GetValidLocation(prevLocation, newLocation);
+            var result = _boardValidator.GetValidState(prevLocation, newLocation);
 
             Assert.AreEqual(result, newLocation);
         }
