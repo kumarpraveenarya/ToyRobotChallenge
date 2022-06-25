@@ -1,21 +1,20 @@
-﻿using ToyRobotChallenge.Service.Extensions;
-using ToyRobotChallenge.Service.GameBoards.Interface;
-using ToyRobotChallenge.Service.ToyRobot;
+﻿using ToyRobotChallenge.Service.ToyRobot;
+using ToyRobotChallenge.Service.Validators.Interface;
 
-namespace ToyRobotChallenge.Service.GameBoards
+namespace ToyRobotChallenge.Service.Validators
 {
-    public class GameBoard : IGameBoard
+    public class BoardValidator : IValidator
     {
         public int Rows { get; private set; }
         public int Columns { get; private set; }
 
-        public GameBoard(int rows, int columns)
+        public BoardValidator(int rows, int columns)
         {
             this.Rows = rows;
             this.Columns = columns;
         }
 
-        public ToyLocation GetValidLocation(ToyLocation previousLocation, ToyLocation newLocation)
+        public RobotState GetValidLocation(RobotState previousLocation, RobotState newLocation)
         {
             if(IsValidLocation(newLocation))
                 return newLocation;
@@ -23,7 +22,7 @@ namespace ToyRobotChallenge.Service.GameBoards
             return previousLocation;
         }
 
-        private bool IsValidLocation(ToyLocation location)
+        private bool IsValidLocation(RobotState location)
         {
             return location.Position.X < Columns && location.Position.X >= 0 &&
                    location.Position.Y < Rows && location.Position.Y >= 0;

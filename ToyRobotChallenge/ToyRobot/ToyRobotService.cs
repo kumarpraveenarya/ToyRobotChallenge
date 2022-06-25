@@ -1,33 +1,33 @@
 ﻿using System;
 using ToyRobotChallenge.Service.Enums;
 using ToyRobotChallenge.Service.Extensions;
-using ToyRobotChallenge.Service.GameBoards.Interface;
 using ToyRobotChallenge.Service.ToyRobot.Interface;
+using ToyRobotChallenge.Service.Validators.Interface;
 
 namespace ToyRobotChallenge.Service.ToyRobot
 {
-    public class RobotToy : IRobotToy
+    public class ToyRobotService : IToyRobotService
     {
-        private readonly IGameBoard _gameBoard;
-        public ToyLocation Location { get; set; }
+        private readonly IValidator _validator;
+        public RobotState Location { get; set; }
 
-        public RobotToy(IGameBoard gameBoard)
+        public ToyRobotService(IValidator gameBoard)
         {
-            _gameBoard = gameBoard;
+            _validator = gameBoard;
         }
 
         public string Report => string.Format("Output: {0},{1},{2}", Location.Position.X,
             Location.Position.Y, Location.Direction.ToString().ToUpper());
 
-        public IRobotToy MoveLeft => Rotate(-1);
+        public IToyRobotService MoveLeft => Rotate(-1);
 
-        public IRobotToy MoveRight => Rotate(1);
+        public IToyRobotService MoveRight => Rotate(1);
 
-        public IRobotToy Move => SetLocation(Location.Move());
+        public IToyRobotService Move => Place(Location.Move());
 
-        public IRobotToy SetLocation(ToyLocation location)
+        public IToyRobotService Place(RobotState location)
         {
-            Location = _gameBoard.GetValidLocation(Location, location);
+            Location = _validator.GetValidLocation(Location, location);
 
             return this;
         }
@@ -40,7 +40,7 @@ namespace ToyRobotChallenge.Service.ToyRobot
             return string.Empty;
         }
 
-        private IRobotToy Rotate(int rotationNumber)
+        private IToyRobotService Rotate(int rotationNumber)
         {
             if (Location == null)
                 return this;

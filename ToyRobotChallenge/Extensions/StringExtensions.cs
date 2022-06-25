@@ -55,13 +55,18 @@ namespace ToyRobotChallenge.Service.Extensions
             return command;
         }
 
-        public static ToyLocation Location(this string[] input)
+        public static RobotState Location(this string[] input)
         {
             input = input.CheckInutCount();
             var position = input.Position();
             var direction = input.Direction();
 
-            return new ToyLocation(position, direction);
+            return new RobotState(position, direction);
+        }
+
+        public static String convertToString(this Enum eff)
+        {
+            return Enum.GetName(eff.GetType(), eff);
         }
     }
 }

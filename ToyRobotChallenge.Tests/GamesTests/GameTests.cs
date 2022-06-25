@@ -1,9 +1,9 @@
 ﻿using NUnit.Framework;
 using ToyRobotChallenge.Service.Enums;
-using ToyRobotChallenge.Service.GameBoards;
 using ToyRobotChallenge.Service.Games;
 using ToyRobotChallenge.Service.Games.Interface;
 using ToyRobotChallenge.Service.ToyRobot;
+using ToyRobotChallenge.Service.Validators;
 
 namespace ToyRobotChallenge.Tests.GamesTests
 {
@@ -15,7 +15,7 @@ namespace ToyRobotChallenge.Tests.GamesTests
         [Test]
         public void When_Place_IS_Valid_Then_Set_ToyLocation()
         {
-            var toy = new RobotToy(new GameBoard(5, 5));
+            var toy = new ToyRobotService(new BoardValidator(5, 5));
             _game = new Game(toy);
             _game.Play("PLACE 1,4,EAST");
             
@@ -27,7 +27,7 @@ namespace ToyRobotChallenge.Tests.GamesTests
         [Test]
         public void When_Place_IS_InValid_Then_ToyLocation_Shoud_Be_Null()
         {
-            var toy = new RobotToy(new GameBoard(5, 5));
+            var toy = new ToyRobotService(new BoardValidator(5, 5));
             _game = new Game(toy);
             
             _game.Play("PLACE 9,7,EAST");
@@ -38,7 +38,7 @@ namespace ToyRobotChallenge.Tests.GamesTests
         [Test]
         public void When_Location_is_Valid_Then_Location_will_Change_in_Report()
         {
-            var toy = new RobotToy(new GameBoard(5, 5));
+            var toy = new ToyRobotService(new BoardValidator(5, 5));
             _game = new Game(toy);
 
             _game.Play("PLACE 3,2,SOUTH");
@@ -50,7 +50,7 @@ namespace ToyRobotChallenge.Tests.GamesTests
         [Test]
         public void When_Location_Is_Out_of_Board_then_Ignore_Move()
         {
-            var toy = new RobotToy(new GameBoard(5, 5));
+            var toy = new ToyRobotService(new BoardValidator(5, 5));
             _game = new Game(toy);
 
             _game.Play("PLACE 2,2,NORTH");
@@ -65,7 +65,7 @@ namespace ToyRobotChallenge.Tests.GamesTests
         [Test]
         public void When_Commands_Are_Valid_Reports_Should_Be_Valid()
         {
-            var toy = new RobotToy(new GameBoard(5, 5));
+            var toy = new ToyRobotService(new BoardValidator(5, 5));
             _game = new Game(toy);
 
             _game.Play("PLACE 3,3,WEST");

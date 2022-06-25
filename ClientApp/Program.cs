@@ -1,9 +1,9 @@
 ﻿using System;
-using ToyRobotChallenge.Service.GameBoards;
-using ToyRobotChallenge.Service.GameBoards.Interface;
 using ToyRobotChallenge.Service.Games;
 using ToyRobotChallenge.Service.ToyRobot;
 using ToyRobotChallenge.Service.ToyRobot.Interface;
+using ToyRobotChallenge.Service.Validators;
+using ToyRobotChallenge.Service.Validators.Interface;
 
 namespace ClientApp
 {
@@ -29,8 +29,8 @@ namespace ClientApp
      EXIT   – Closes the toy Simulator.
 ";
 
-            IGameBoard board = new GameBoard(5, 5);
-            IRobotToy robot = new RobotToy(board);
+            IValidator validator = new BoardValidator(5, 5);
+            IToyRobotService robot = new ToyRobotService(validator);
             var game = new Game(robot);
 
             var stopApplication = false;
