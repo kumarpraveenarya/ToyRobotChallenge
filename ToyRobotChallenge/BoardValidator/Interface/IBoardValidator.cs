@@ -1,6 +1,6 @@
 ﻿using ToyRobotChallenge.Service.ToyRobot;
 
-namespace ToyRobotChallenge.Service.Validators.Interface
+namespace ToyRobotChallenge.Service.BoardValidator.Interface
 {
     public interface IBoardValidator
     {

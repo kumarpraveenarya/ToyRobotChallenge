@@ -7,11 +7,11 @@ using ToyRobotChallenge.Service.ToyRobot.Interface;
 
 namespace ToyRobotChallenge.Service.Games
 {
-    public class GameService : IGameService
+    public class GameCommand : IGameCommand
     {
         private IToyRobotService _toy { get; }
 
-        public GameService(IToyRobotService toy)
+        public GameCommand(IToyRobotService toy)
         {
             this._toy = toy;
         }

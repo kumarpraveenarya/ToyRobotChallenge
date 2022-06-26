@@ -2,7 +2,7 @@
 
 namespace ToyRobotChallenge.Service.Games.Interface
 {
-    public interface IGameService
+    public interface IGameCommand
     {
         string Play(string command);
 

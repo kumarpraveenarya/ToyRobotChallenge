@@ -1,8 +1,8 @@
 ﻿using NUnit.Framework;
+using ToyRobotChallenge.Service.BoardValidator;
+using ToyRobotChallenge.Service.BoardValidator.Interface;
 using ToyRobotChallenge.Service.Enums;
 using ToyRobotChallenge.Service.ToyRobot;
-using ToyRobotChallenge.Service.Validators;
-using ToyRobotChallenge.Service.Validators.Interface;
 
 namespace ToyRobotChallenge.Tests.GameBoardsTests
 {

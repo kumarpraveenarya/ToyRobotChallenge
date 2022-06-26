@@ -1,8 +1,8 @@
 ﻿using System;
+using ToyRobotChallenge.Service.BoardValidator.Interface;
 using ToyRobotChallenge.Service.ToyRobot;
-using ToyRobotChallenge.Service.Validators.Interface;
 
-namespace ToyRobotChallenge.Service.Validators
+namespace ToyRobotChallenge.Service.BoardValidator
 {
     public class BoardValidator : IBoardValidator
     {

@@ -5,5 +5,9 @@
     &lt;TestId&gt;NUnit3x::3049AB40-ACE8-48C6-9962-A61200747622::.NETCoreApp,Version=v3.1::ToyRobotChallenge.Tests.GameBoardsTests.GameBoardTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::3049AB40-ACE8-48C6-9962-A61200747622::.NETCoreApp,Version=v3.1::ToyRobotChallenge.Tests.GamesTests.GameTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::3049AB40-ACE8-48C6-9962-A61200747622::.NETCoreApp,Version=v3.1::ToyRobotChallenge.Tests.ToyRobotTests.RobotToyTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::3049AB40-ACE8-48C6-9962-A61200747622::.NETCoreApp,Version=v3.1::ToyRobotChallenge.Tests.ExtensionsTests.StringExtensionsTests.When_Enum_Provided_convert_to_String&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::3049AB40-ACE8-48C6-9962-A61200747622::.NETCoreApp,Version=v3.1::ToyRobotChallenge.Tests.ExtensionsTests.StringExtensionsTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::3049AB40-ACE8-48C6-9962-A61200747622::.NETCoreApp,Version=v3.1::ToyRobotChallenge.Tests.ExtensionsTests.StateExtensionsTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::3049AB40-ACE8-48C6-9962-A61200747622::.NETCoreApp,Version=v3.1::ToyRobotChallenge.Tests.GamesCommandsTests.GameCommandTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

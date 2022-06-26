@@ -1,8 +1,8 @@
 ﻿using System;
+using ToyRobotChallenge.Service.BoardValidator.Interface;
 using ToyRobotChallenge.Service.Enums;
 using ToyRobotChallenge.Service.Extensions;
 using ToyRobotChallenge.Service.ToyRobot.Interface;
-using ToyRobotChallenge.Service.Validators.Interface;
 
 namespace ToyRobotChallenge.Service.ToyRobot
 {
@@ -16,7 +16,7 @@ namespace ToyRobotChallenge.Service.ToyRobot
             _validator = gameBoard;
         }
 
-        public string Report => $"Output: {State.Position.X},{State.Position.Y}, {State.Direction.convertToString()}".ToUpper();
+        public string Report => State.ToString();
 
         public IToyRobotService MoveLeft => Rotate(-1);
 
@@ -29,7 +29,8 @@ namespace ToyRobotChallenge.Service.ToyRobot
         private Direction[] Directions => (Direction[])Enum.GetValues(typeof(Direction));
 
         private void SetDirection(int rotationNumber) => State.Direction = (State.Direction + rotationNumber) < 0 
-                                                                ? Directions[^1] : Directions[(int)(State.Direction + rotationNumber) % Directions.Length];
+                                                                ? Directions[^1] 
+                                                                : Directions[(int)(State.Direction + rotationNumber) % Directions.Length];
 
         public IToyRobotService Place(RobotState state)
         {

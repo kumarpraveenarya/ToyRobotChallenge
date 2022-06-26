@@ -1,9 +1,9 @@
 ﻿using System;
+using ToyRobotChallenge.Service.BoardValidator;
+using ToyRobotChallenge.Service.BoardValidator.Interface;
 using ToyRobotChallenge.Service.Games;
 using ToyRobotChallenge.Service.ToyRobot;
 using ToyRobotChallenge.Service.ToyRobot.Interface;
-using ToyRobotChallenge.Service.Validators;
-using ToyRobotChallenge.Service.Validators.Interface;
 
 namespace ClientApp
 {
@@ -31,7 +31,7 @@ namespace ClientApp
             // by default board is set to 5X5
             IBoardValidator board = new BoardValidator();
             IToyRobotService robot = new ToyRobotService(board);
-            var game = new GameService(robot);
+            var game = new GameCommand(robot);
 
             var stopApplication = false;
             Console.WriteLine(description);

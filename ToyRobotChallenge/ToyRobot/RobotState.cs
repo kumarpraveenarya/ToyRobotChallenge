@@ -1,4 +1,5 @@
 ﻿using ToyRobotChallenge.Service.Enums;
+using ToyRobotChallenge.Service.Extensions;
 
 namespace ToyRobotChallenge.Service.ToyRobot
 {
@@ -12,6 +13,11 @@ namespace ToyRobotChallenge.Service.ToyRobot
         {
             Position = position;
             Direction = direction;
+        }
+
+        public override string ToString()
+        {
+            return $"Output: {Position.X},{Position.Y},{Direction.convertToString().ToUpper()}"; 
         }
     }
 }

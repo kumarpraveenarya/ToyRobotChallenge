@@ -1,12 +1,12 @@
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Windows.Forms;
+using ToyRobotChallenge.Service.BoardValidator;
+using ToyRobotChallenge.Service.BoardValidator.Interface;
 using ToyRobotChallenge.Service.Games;
 using ToyRobotChallenge.Service.Games.Interface;
 using ToyRobotChallenge.Service.ToyRobot;
 using ToyRobotChallenge.Service.ToyRobot.Interface;
-using ToyRobotChallenge.Service.Validators;
-using ToyRobotChallenge.Service.Validators.Interface;
 
 namespace ToyRobotChallenge.App
 {
@@ -45,7 +45,7 @@ namespace ToyRobotChallenge.App
 			ServiceProvider = new ServiceCollection()
                 .AddSingleton<IBoardValidator, BoardValidator>()
 				.AddSingleton<IToyRobotService, ToyRobotService>()
-                .AddSingleton<IGameService, GameService>()
+                .AddSingleton<IGameCommand, GameCommand>()
 				.BuildServiceProvider();
 		}
 

@@ -3,10 +3,10 @@ using System;
 using ToyRobotChallenge.Service.Enums;
 using ToyRobotChallenge.Service.Extensions;
 
-namespace ToyRobotChallenge.Tests.ParserTests
+namespace ToyRobotChallenge.Tests.ExtensionsTests
 {
     [TestFixture]
-    public class CommandParserTests
+    public class StringExtensionsTests
     {
         [Test]
         public void When_Input_Command_IsNot_Place_WithPositions_throw_Exception()
@@ -72,6 +72,15 @@ namespace ToyRobotChallenge.Tests.ParserTests
             Assert.AreEqual(result.Direction, Direction.South);
             Assert.AreEqual(result.Position.X, 0);
             Assert.AreEqual(result.Position.Y, 0);
+        }
+
+        [Test]
+        public void When_Enum_Provided_convert_to_String()
+        {
+            var direction = Direction.South;
+            var result = direction.convertToString();
+
+            Assert.AreEqual(result, "South");
         }
     }
 }

@@ -1,9 +1,9 @@
 ﻿using NUnit.Framework;
 using Moq;
+using ToyRobotChallenge.Service.BoardValidator.Interface;
 using ToyRobotChallenge.Service.Enums;
 using ToyRobotChallenge.Service.ToyRobot;
 using ToyRobotChallenge.Service.ToyRobot.Interface;
-using ToyRobotChallenge.Service.Validators.Interface;
 
 namespace ToyRobotChallenge.Tests.ToyRobotTests
 {

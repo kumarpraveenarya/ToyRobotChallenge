@@ -2,18 +2,18 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using ToyRobotChallenge.Service.BoardValidator.Interface;
 using ToyRobotChallenge.Service.Enums;
 using ToyRobotChallenge.Service.Extensions;
 using ToyRobotChallenge.Service.Games.Interface;
 using ToyRobotChallenge.Service.ToyRobot;
 using ToyRobotChallenge.Service.ToyRobot.Interface;
-using ToyRobotChallenge.Service.Validators.Interface;
 
 namespace ToyRobotChallenge.App
 {
 	public partial class frmToyRobot : Form
     {
-        private readonly IGameService game;
+        private readonly IGameCommand game;
         private readonly IBoardValidator boardValidator;
         private readonly IToyRobotService robotService;
 
@@ -22,7 +22,7 @@ namespace ToyRobotChallenge.App
 			InitializeComponent();
             boardValidator = serviceProvider.GetRequiredService<IBoardValidator>();
             robotService = serviceProvider.GetRequiredService<IToyRobotService>();
-            game = serviceProvider.GetRequiredService<IGameService>();
+            game = serviceProvider.GetRequiredService<IGameCommand>();
 			
 			//Tested different dimentions
             //boardValidator.SetPlayBoard(7,7);
@@ -31,6 +31,9 @@ namespace ToyRobotChallenge.App
             InitialiseRobot();
 		}
 
+		/// <summary>
+		/// just for testing felt rows and columns could be same
+		/// </summary>
         public void FillBoard()
         {
             var board = boardValidator.GetPlayBoard();
