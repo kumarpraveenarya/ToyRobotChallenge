@@ -30,7 +30,7 @@ dotnet run
 <br>RIGHT : This rotates toy 90 degrees to the right (i.e. clockwise) without changing the position.
 <br>REPORT : This announces the X,Y and direction of the toy by printing to the console
 </p>
-<br><br>
+<br>
 <h2>Unit Tests</h2>
 <p>run following command in folder ToyRobotChallenge<br/>
 
