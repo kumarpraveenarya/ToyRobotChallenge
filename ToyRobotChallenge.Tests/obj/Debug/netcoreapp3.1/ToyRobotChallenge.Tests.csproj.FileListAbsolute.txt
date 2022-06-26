@@ -1,8 +1,3 @@
-C:\Interview\ToyRobot\ToyRobotChallenge\ToyRobotChallenge.Tests\obj\Debug\netcoreapp3.1\ToyRobotChallenge.Tests.csproj.AssemblyReference.cache
-C:\Interview\ToyRobot\ToyRobotChallenge\ToyRobotChallenge.Tests\obj\Debug\netcoreapp3.1\ToyRobotChallenge.Tests.GeneratedMSBuildEditorConfig.editorconfig
-C:\Interview\ToyRobot\ToyRobotChallenge\ToyRobotChallenge.Tests\obj\Debug\netcoreapp3.1\ToyRobotChallenge.Tests.AssemblyInfoInputs.cache
-C:\Interview\ToyRobot\ToyRobotChallenge\ToyRobotChallenge.Tests\obj\Debug\netcoreapp3.1\ToyRobotChallenge.Tests.AssemblyInfo.cs
-C:\Interview\ToyRobot\ToyRobotChallenge\ToyRobotChallenge.Tests\obj\Debug\netcoreapp3.1\ToyRobotChallenge.Tests.csproj.CoreCompileInputs.cache
 C:\Interview\ToyRobot\ToyRobotChallenge\ToyRobotChallenge.Tests\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.dll
 C:\Interview\ToyRobot\ToyRobotChallenge\ToyRobotChallenge.Tests\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.pdb
 C:\Interview\ToyRobot\ToyRobotChallenge\ToyRobotChallenge.Tests\bin\Debug\netcoreapp3.1\nunit.engine.dll
@@ -97,6 +92,11 @@ C:\Interview\ToyRobot\ToyRobotChallenge\ToyRobotChallenge.Tests\bin\Debug\netcor
 C:\Interview\ToyRobot\ToyRobotChallenge\ToyRobotChallenge.Tests\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.EventLog.dll
 C:\Interview\ToyRobot\ToyRobotChallenge\ToyRobotChallenge.Tests\bin\Debug\netcoreapp3.1\ToyRobotChallenge.Service.dll
 C:\Interview\ToyRobot\ToyRobotChallenge\ToyRobotChallenge.Tests\bin\Debug\netcoreapp3.1\ToyRobotChallenge.Service.pdb
+C:\Interview\ToyRobot\ToyRobotChallenge\ToyRobotChallenge.Tests\obj\Debug\netcoreapp3.1\ToyRobotChallenge.Tests.csproj.AssemblyReference.cache
+C:\Interview\ToyRobot\ToyRobotChallenge\ToyRobotChallenge.Tests\obj\Debug\netcoreapp3.1\ToyRobotChallenge.Tests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Interview\ToyRobot\ToyRobotChallenge\ToyRobotChallenge.Tests\obj\Debug\netcoreapp3.1\ToyRobotChallenge.Tests.AssemblyInfoInputs.cache
+C:\Interview\ToyRobot\ToyRobotChallenge\ToyRobotChallenge.Tests\obj\Debug\netcoreapp3.1\ToyRobotChallenge.Tests.AssemblyInfo.cs
+C:\Interview\ToyRobot\ToyRobotChallenge\ToyRobotChallenge.Tests\obj\Debug\netcoreapp3.1\ToyRobotChallenge.Tests.csproj.CoreCompileInputs.cache
 C:\Interview\ToyRobot\ToyRobotChallenge\ToyRobotChallenge.Tests\obj\Debug\netcoreapp3.1\ToyRobotChallenge.Tests.csproj.CopyComplete
 C:\Interview\ToyRobot\ToyRobotChallenge\ToyRobotChallenge.Tests\obj\Debug\netcoreapp3.1\ToyRobotChallenge.Tests.dll
 C:\Interview\ToyRobot\ToyRobotChallenge\ToyRobotChallenge.Tests\obj\Debug\netcoreapp3.1\ToyRobotChallenge.Tests.pdb

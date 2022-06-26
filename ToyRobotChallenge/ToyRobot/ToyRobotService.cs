@@ -16,7 +16,7 @@ namespace ToyRobotChallenge.Service.ToyRobot
             _validator = gameBoard;
         }
 
-        public string Report => State.ToString();
+        public string Report => State?.ToString();
 
         public IToyRobotService MoveLeft => Rotate(-1);
 

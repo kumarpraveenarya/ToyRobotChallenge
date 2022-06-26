@@ -59,19 +59,22 @@ namespace ToyRobotChallenge.App
 		private void btnPlace_Click(object sender, EventArgs e)
 		{
             var command = $"PLACE {txtX.Value},{txtY.Value},{cmbDirection.Text}";
-            var result = game.Play(command);
+            ExecuteCommand(command);
+        }
+        private void btnMove_Click(object sender, EventArgs e) => ExecuteCommand(Command.Move.convertToString());
 
-			lblOutputLabel.Visible = false;
-			lblOutputValue.Visible = false;
+        private void btnLeft_Click(object sender, EventArgs e) => ExecuteCommand(Command.Left.convertToString());
 
-            if (result != string.Empty)
-				MessageBox.Show(string.Join(Environment.NewLine, result.ToString()));
-			else
-                PlaceRobotOnMatrix(game.GetRobotState);
-		}
+        private void btnRight_Click(object sender, EventArgs e) => ExecuteCommand(Command.Right.convertToString());
 
+        private void btnReport_Click(object sender, EventArgs e) => ExecuteCommand(Command.Report.convertToString());
+
+        #region Visual Simulation Logic
         private void PlaceRobotOnMatrix(RobotState state)
 		{
+			if(state == null) 
+                return;
+
 			tlp1.Controls.Clear();
 			PictureBox pictureBox = (PictureBox)tlp1.GetControlFromPosition(tlp1.RowCount - state.Position.X, tlp1.ColumnCount - state.Position.Y);
 			if (pictureBox == null)
@@ -99,36 +102,23 @@ namespace ToyRobotChallenge.App
 			pbStart.Image = null;
 		}
 
-        private RobotState ExecuteCommand(Command command)
+        private RobotState ExecuteCommand(string command)
         {
-            var result = game.Play(command.convertToString());
+            var result = game.Play(command);
 
-			lblOutputLabel.Visible = false;
-			lblOutputValue.Visible = false;
+            lblOutputValue.Visible = false;
 
 			// If the operation fails show error
-			if (result != String.Empty)
-				MessageBox.Show(string.Join(Environment.NewLine, result.ToString()));
-			else
+            if (!string.IsNullOrEmpty(result))
+            {
+                lblOutputValue.Visible = true;
+                lblOutputValue.Text = result;
+            }
+            else
 				// if the Domain Operation succeeds place the robot on the table
 				PlaceRobotOnMatrix(game.GetRobotState);
 			return game.GetRobotState;
 		}
-
-		private void btnMove_Click(object sender, EventArgs e) => ExecuteCommand(Command.Move);
-
-		private void btnLeft_Click(object sender, EventArgs e) => ExecuteCommand(Command.Left);
-		
-		private void btnRight_Click(object sender, EventArgs e) => ExecuteCommand(Command.Right);
-
-		private void btnReport_Click(object sender, EventArgs e)
-        {
-            var result = ExecuteCommand(Command.Report);
-			if (result != null)
-			{
-				lblOutputLabel.Visible = true;
-                lblOutputValue.Text = $"{result.Position.X},{result.Position.Y},{result.Direction.convertToString()}";
-			}
-		}
+        #endregion
 	}
 }

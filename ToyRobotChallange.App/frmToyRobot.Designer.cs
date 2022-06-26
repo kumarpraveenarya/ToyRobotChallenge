@@ -41,7 +41,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtY = new System.Windows.Forms.NumericUpDown();
-            this.lblOutputLabel = new System.Windows.Forms.Label();
             this.lblOutputValue = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.txtX)).BeginInit();
@@ -165,22 +164,11 @@
             this.txtY.Size = new System.Drawing.Size(150, 27);
             this.txtY.TabIndex = 11;
             // 
-            // lblOutputLabel
-            // 
-            this.lblOutputLabel.AutoSize = true;
-            this.lblOutputLabel.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblOutputLabel.Location = new System.Drawing.Point(411, 735);
-            this.lblOutputLabel.Name = "lblOutputLabel";
-            this.lblOutputLabel.Size = new System.Drawing.Size(114, 37);
-            this.lblOutputLabel.TabIndex = 15;
-            this.lblOutputLabel.Text = "Output: ";
-            this.lblOutputLabel.Visible = false;
-            // 
             // lblOutputValue
             // 
             this.lblOutputValue.AutoSize = true;
             this.lblOutputValue.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblOutputValue.Location = new System.Drawing.Point(531, 735);
+            this.lblOutputValue.Location = new System.Drawing.Point(400, 735);
             this.lblOutputValue.Name = "lblOutputValue";
             this.lblOutputValue.Size = new System.Drawing.Size(122, 37);
             this.lblOutputValue.TabIndex = 16;
@@ -202,7 +190,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1679, 872);
             this.Controls.Add(this.lblOutputValue);
-            this.Controls.Add(this.lblOutputLabel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cmbDirection);
             this.Controls.Add(this.pbStart);
@@ -242,7 +229,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown txtY;
-        private System.Windows.Forms.Label lblOutputLabel;
         private System.Windows.Forms.Label lblOutputValue;
         private System.Windows.Forms.Panel panel1;
     }

@@ -17,6 +17,8 @@ namespace ToyRobotChallenge.Service.ToyRobot
 
         public override string ToString()
         {
+            if (Position == null)
+                return string.Empty;
             return $"Output: {Position.X},{Position.Y},{Direction.convertToString().ToUpper()}"; 
         }
     }
