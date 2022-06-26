@@ -38,9 +38,9 @@ dotnet test
 </p>
 <h2>Visual Application</h2>
 <p>Just to show this its working fine, I have created a winform app using tablelayoutpanel, Just for sake of testing added same number of rows and column. used image to move and change direction with arrow. This application can be accessed in ToyRobotChallange.App folder. 
-<br>
+<br><br>
 Issue/Bug : some time you won't see tablelayoutpanel making proper grid of row and colum. which will affect robot toy movement. Its not a probram isue but UI (Visual Studio issue)
-<br>
+<br><br>
 Soution : Open frmToyRobot.Designer.cs and remove lines added by Visual Studio UI to add Column in tablelayoutanel below
           this.tlp1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
 
