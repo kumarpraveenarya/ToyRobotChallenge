@@ -52,7 +52,8 @@
             // tlp1
             // 
             this.tlp1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tlp1.Location = new System.Drawing.Point(985, 36);
+            this.tlp1.ColumnCount = 1;
+            this.tlp1.Location = new System.Drawing.Point(876, 36);
             this.tlp1.Name = "tlp1";
             this.tlp1.Size = new System.Drawing.Size(653, 595);
             this.tlp1.TabIndex = 0;
