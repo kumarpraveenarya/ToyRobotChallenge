@@ -37,7 +37,7 @@ dotnet run
 dotnet test
 </p>
 <h2>Visual Application</h2>
-Just to show this its working fine, I have created a winform app using tablelayoutpanel, Just for sake of testing added same number of rows and column. used image to move and change direction with arrow. This application can be accessed in ToyRobotChallange.App folder. 
+<p>Just to show this its working fine, I have created a winform app using tablelayoutpanel, Just for sake of testing added same number of rows and column. used image to move and change direction with arrow. This application can be accessed in ToyRobotChallange.App folder. 
 <br>
 Issue/Bug : some time you won't see tablelayoutpanel making proper grid of row and colum. which will affect robot toy movement. Its not a probram isue but UI (Visual Studio issue)
 <br>
@@ -46,3 +46,4 @@ Soution : Open frmToyRobot.Designer.cs and remove lines added by Visual Studio U
 
 I am attaching the image of the layout below  
 <img src ="https://github.com/kumarpraveenarya/ToyRobotChallenge/blob/main/visualchalange.png" align= center/>
+</p>          
