@@ -24,6 +24,13 @@ namespace ToyRobotChallenge.Service.ToyRobot
 
         public IToyRobotService Move => Place(State.Move());
 
+        public override string ToString() => (State == null) ? "Toy Robot is not placed on Game Board" : string.Empty;
+
+        private Direction[] Directions => (Direction[])Enum.GetValues(typeof(Direction));
+
+        private void SetDirection(int rotationNumber) => State.Direction = (State.Direction + rotationNumber) < 0 
+                                                                ? Directions[^1] : Directions[(int)(State.Direction + rotationNumber) % Directions.Length];
+
         public IToyRobotService Place(RobotState state)
         {
             State = _validator.GetValidState(State, state);
@@ -31,28 +38,12 @@ namespace ToyRobotChallenge.Service.ToyRobot
             return this;
         }
 
-        public override string ToString()
-        {
-            if (State == null)
-                return "Toy Robot is not placed on Game Board";
-
-            return string.Empty;
-        }
-
         private IToyRobotService Rotate(int rotationNumber)
         {
             if (State == null)
                 return this;
 
-            var directions = (Direction[])Enum.GetValues(typeof(Direction));
-           
-            if ((State.Direction + rotationNumber) < 0)
-                State.Direction = directions[directions.Length - 1];
-            else
-            {
-                var index = ((int)((State.Direction) + rotationNumber)) % directions.Length;
-                State.Direction = directions[index];
-            }
+            SetDirection(rotationNumber);
 
             return this;
         }

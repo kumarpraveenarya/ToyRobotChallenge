@@ -61,19 +61,13 @@ namespace ToyRobotChallenge.App
 			lblOutputLabel.Visible = false;
 			lblOutputValue.Visible = false;
 
-			// If the operation fails show error
-			if (result != string.Empty)
+            if (result != string.Empty)
 				MessageBox.Show(string.Join(Environment.NewLine, result.ToString()));
 			else
-				// if the Domain Operation succeeds place the robot on the table
-				PlaceRobotOnMatrix(game.GetRobotState());
+                PlaceRobotOnMatrix(game.GetRobotState);
 		}
 
-		/// <summary>
-		///		Reads the <param name="state"></param> of the robot and places it on the tabletop
-		/// </summary>
-		/// <param name="state">The current state of the Robot. This is used to place the robot on the tabletop</param>
-		private void PlaceRobotOnMatrix(RobotState state)
+        private void PlaceRobotOnMatrix(RobotState state)
 		{
 			tlp1.Controls.Clear();
 			PictureBox pictureBox = (PictureBox)tlp1.GetControlFromPosition(tlp1.RowCount - state.Position.X, tlp1.ColumnCount - state.Position.Y);
@@ -102,9 +96,7 @@ namespace ToyRobotChallenge.App
 			pbStart.Image = null;
 		}
 
-
-
-		private RobotState ExecuteCommand(Command command)
+        private RobotState ExecuteCommand(Command command)
         {
             var result = game.Play(command.convertToString());
 
@@ -116,24 +108,15 @@ namespace ToyRobotChallenge.App
 				MessageBox.Show(string.Join(Environment.NewLine, result.ToString()));
 			else
 				// if the Domain Operation succeeds place the robot on the table
-				PlaceRobotOnMatrix(game.GetRobotState());
-			return game.GetRobotState();
+				PlaceRobotOnMatrix(game.GetRobotState);
+			return game.GetRobotState;
 		}
 
-		private void btnMove_Click(object sender, EventArgs e)
-		{
-			ExecuteCommand(Command.Move);
-		}
+		private void btnMove_Click(object sender, EventArgs e) => ExecuteCommand(Command.Move);
 
-		private void btnLeft_Click(object sender, EventArgs e)
-		{
-			ExecuteCommand(Command.Left);
-		}
-
-		private void btnRight_Click(object sender, EventArgs e)
-		{
-			ExecuteCommand(Command.Right);
-		}
+		private void btnLeft_Click(object sender, EventArgs e) => ExecuteCommand(Command.Left);
+		
+		private void btnRight_Click(object sender, EventArgs e) => ExecuteCommand(Command.Right);
 
 		private void btnReport_Click(object sender, EventArgs e)
         {
@@ -141,8 +124,7 @@ namespace ToyRobotChallenge.App
 			if (result != null)
 			{
 				lblOutputLabel.Visible = true;
-				lblOutputValue.Visible = true;
-				lblOutputValue.Text = $"{result.Position.X},{result.Position.Y},{result.Direction.convertToString()}";
+                lblOutputValue.Text = $"{result.Position.X},{result.Position.Y},{result.Direction.convertToString()}";
 			}
 		}
 	}

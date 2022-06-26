@@ -29,9 +29,6 @@ namespace ToyRobotChallenge.Service.Games
             });
         }
 
-        public RobotState GetRobotState()
-        {
-            return _toy.State;
-        }
+        public RobotState GetRobotState => _toy.State;
     }
 }

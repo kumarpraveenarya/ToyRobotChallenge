@@ -40,7 +40,7 @@ namespace ToyRobotChallenge.Service.Extensions
         {
             Direction direction;
             var commandParams = input[1].Split(',');
-            if (!Enum.TryParse(commandParams[commandParams.Length -1], true, out direction))
+            if (!Enum.TryParse(commandParams[^1], true, out direction))
                 throw new ArgumentException("Invalid direction. Please select from one of the following directions: NORTH|EAST|SOUTH|WEST");
 
             return direction;
@@ -64,9 +64,6 @@ namespace ToyRobotChallenge.Service.Extensions
             return new RobotState(position, direction);
         }
 
-        public static String convertToString(this Enum eff)
-        {
-            return Enum.GetName(eff.GetType(), eff);
-        }
+        public static String convertToString(this Enum eff) => Enum.GetName(eff.GetType(), eff);
     }
 }

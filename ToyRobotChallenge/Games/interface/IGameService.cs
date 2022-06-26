@@ -6,6 +6,6 @@ namespace ToyRobotChallenge.Service.Games.Interface
     {
         string Play(string command);
 
-        RobotState GetRobotState();
+        RobotState GetRobotState { get; }
     }
 }

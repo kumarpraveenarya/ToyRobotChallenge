@@ -23,18 +23,9 @@ namespace ToyRobotChallenge.Service.Validators
             return (Rows, Columns);
         }
 
-        public RobotState GetValidState(RobotState previousLocation, RobotState newLocation)
-        {
-            if(IsValidState(newLocation))
-                return newLocation;
-
-            return previousLocation;
-        }
-
-        private bool IsValidState(RobotState location)
-        {
-            return location.Position.X < Columns && location.Position.X >= 0 &&
-                   location.Position.Y < Rows && location.Position.Y >= 0;
-        }
+        public RobotState GetValidState(RobotState previousLocation, RobotState newLocation) => IsValidState(newLocation) ? newLocation : previousLocation;
+        
+        private bool IsValidState(RobotState location) => location.Position.X < this.Columns && location.Position.X >= 0 
+                                                            && location.Position.Y < this.Rows && location.Position.Y >= 0;
     }
 }
