@@ -2,7 +2,7 @@
 <img src = "https://github.com/kumarpraveenarya/ToyRobotChallenge/blob/main/toyrobot.jpg" align = right>
 This C# .NET solution is a simulator of a toy robot that moves on a tabletop. The development of this project is driven by unit tests. These are included in this repository. A full requirements specification can be found here:<br><a href = "https://github.com/kumarpraveenarya/ToyRobotChallenge/blob/main/ToyRobotChallenge/App%20Specification.txt">App Specification.txt</a>
 
-<h2>Design Pattern used in Solution<h2>
+<h2>Design Pattern used in Solution</h2>
 <p>Command Design Pattern</p>
 <p>Requirement of the project leads this project toward command pattern where one entry point for all different commands executed, Here we have created IGameCommand interface which implement 2 methods<br>
 1. Play : this method execute all the commands sent by client and return message, exceptions and Report as per command and error.
