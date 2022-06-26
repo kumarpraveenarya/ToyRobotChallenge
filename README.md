@@ -36,9 +36,6 @@ dotnet run
 
 dotnet test
 </p>
-<h4>Supported Operating Systems and Issues</h4>
-<p>Toy Robot Simulator should run on any Windows operating system. It has been tested on Windows 10 Home Edition 32-bit. Existing issues can be logged on the Issues page.</p>
-
 <h2>Visual Application</h2>
 Just to show this its working fine, I have created a winform app using tablelayoutpanel, Just for sake of testing added same number of rows and column. used image to move and change direction with arrow. This application can be accessed in ToyRobotChallange.App folder. I am attaching the image of the layout below  
 <img src ="https://github.com/kumarpraveenarya/ToyRobotChallenge/blob/main/visualchalange.png" align= center/>
