@@ -24,7 +24,7 @@ namespace ToyRobotChallenge.Service.ToyRobot
 
         public IToyRobotService Move => Place(State.Move());
 
-        public override string ToString() => (State == null) ? "Toy Robot is not placed on Game Board" : string.Empty;
+        public override string ToString() => (State == null) ? "Toy Robot is not placed on Game Board/Dimentions are out or Board" : string.Empty;
 
         private Direction[] Directions => (Direction[])Enum.GetValues(typeof(Direction));
 

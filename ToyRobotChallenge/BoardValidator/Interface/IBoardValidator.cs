@@ -4,9 +4,9 @@ namespace ToyRobotChallenge.Service.BoardValidator.Interface
 {
     public interface IBoardValidator
     {
-        void SetPlayBoard(int rows, int columns);
+        (int X, int Y) GetPlayBoard { get; }
 
-        (int, int) GetPlayBoard();
+        void SetPlayBoard(int rows, int columns);
 
         RobotState GetValidState(RobotState previousLocation, RobotState location);
     }

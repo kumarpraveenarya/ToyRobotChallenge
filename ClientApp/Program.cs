@@ -12,16 +12,13 @@ namespace ClientApp
         public static void Main(string[] args)
         {
             const string description =
-@" Instructions to Run
+@" Instructions to Run, defult Grid is 5X5
 
-  1: Place the toy on a 5 x 5 grid using the following command:
-
-     PLACE X,Y,F (Where X and Y are integers and F 
+  1:PLACE X,Y,F (Where X and Y are integers and F 
      must be either NORTH, SOUTH, EAST or WEST)
+    For Example : PLACE 0,0,SOUTH
 
-  2: When the toy is placed, have at go at using
-     the following commands.
-                
+  2: After Placing Toy on Grid, use below commands to run the game                    
      REPORT – Shows the current status of the toy. 
      LEFT   – turns the toy 90 degrees left.
      RIGHT  – turns the toy 90 degrees right.
@@ -30,6 +27,9 @@ namespace ClientApp
 ";
             // by default board is set to 5X5
             IBoardValidator board = new BoardValidator();
+            
+            // playground can be changed by below command
+            //board.SetPlayBoard(10,10);
             IToyRobotService robot = new ToyRobotService(board);
             var game = new GameCommand(robot);
 

@@ -7,3 +7,4 @@ C:\Interview\ToyRobot\ToyRobotChallenge\ToyRobotChallenge\obj\Debug\netcoreapp3.
 C:\Interview\ToyRobot\ToyRobotChallenge\ToyRobotChallenge\obj\Debug\netcoreapp3.1\ToyRobotChallenge.Service.csproj.CoreCompileInputs.cache
 C:\Interview\ToyRobot\ToyRobotChallenge\ToyRobotChallenge\obj\Debug\netcoreapp3.1\ToyRobotChallenge.Service.dll
 C:\Interview\ToyRobot\ToyRobotChallenge\ToyRobotChallenge\obj\Debug\netcoreapp3.1\ToyRobotChallenge.Service.pdb
+C:\Interview\ToyRobot\ToyRobotChallenge\ToyRobotChallenge\obj\Debug\netcoreapp3.1\ToyRobotChallenge.Service.csproj.AssemblyReference.cache

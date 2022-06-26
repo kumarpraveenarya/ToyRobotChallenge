@@ -26,7 +26,7 @@ namespace ToyRobotChallenge.App
 			
 			//Tested different dimentions
             //boardValidator.SetPlayBoard(7,7);
-			
+
             FillBoard();
             InitialiseRobot();
 		}
@@ -36,9 +36,9 @@ namespace ToyRobotChallenge.App
 		/// </summary>
         public void FillBoard()
         {
-            var board = boardValidator.GetPlayBoard();
-            tlp1.ColumnCount = board.Item1;
-            tlp1.RowCount = board.Item2;
+            var board = boardValidator.GetPlayBoard;
+            tlp1.ColumnCount = board.X;
+            tlp1.RowCount = board.Y;
             for (int i = 0; i < board.Item1; i++)
             {
                 tlp1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));

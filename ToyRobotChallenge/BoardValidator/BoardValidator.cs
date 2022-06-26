@@ -18,10 +18,7 @@ namespace ToyRobotChallenge.Service.BoardValidator
             this.Columns = columns;
         }
 
-        public (int,int) GetPlayBoard()
-        {
-            return (Rows, Columns);
-        }
+        public (int X,int Y) GetPlayBoard => (Rows, Columns);
 
         public RobotState GetValidState(RobotState previousLocation, RobotState newLocation) => IsValidState(newLocation) ? newLocation : previousLocation;
         
